@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        .chat-container {
+            position: relative;
+            overflow-y: auto;
+            height: 400px; /* Set a fixed height */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .child-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .user, .chatbot {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .user {
+            background-color: #e1ffc7; /* User message color */
+            align-self: flex-end;
+        }
+        .chatbot {
+            background-color: #d0e1ff; /* Bot message color */
+            align-self: flex-start;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="chat-container">
+    <div class="child-container" id="mainuser"></div>
+    <input type="text" id="input" placeholder="Type a message..." aria-label="Chat input">
+    <button id="submit" aria-label="Send message">Send</button>
+    <p id="headShow"></p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

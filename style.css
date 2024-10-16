@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #d0e1ff;
+    --background-color: #f9f9f9;
+    --border-radius: 5px;
+    --padding: 10px;
+}
+
+.chat-container {
+    position: relative;
+    overflow-y: auto;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    background-color: var(--background-color);
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-container {
+        height: 200px;
+    }
+}
